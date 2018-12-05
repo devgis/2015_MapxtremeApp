@@ -1,0 +1,10 @@
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\bin\Debug\MapAPP.exe.config
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\bin\Debug\MapAPP.exe
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\bin\Debug\MapAPP.pdb
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\MapAPP.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\MapAPP.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\MapAPP.exe
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\MapAPP.pdb
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\MapAPP.MainMapForm.resources
+C:\Documents and Settings\Administrator\桌面\MapAPP\MapAPP\obj\Debug\MapAPP.InfoWindow.resources

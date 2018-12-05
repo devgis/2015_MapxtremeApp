@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WorkSpace name="" version="MXP_WorkSpace_1_0" date="2004-03-31T11:14:08.0000000-05:00" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.mapinfo.com/mxp">
+  <ConnectionSet />
+  <DataSourceDefinitionSet>
+    <TABFileDataSourceDefinition id="id1" readOnly="false">
+      <DataSourceName>mexico</DataSourceName>
+      <FileName>mexico.TAB</FileName>
+    </TABFileDataSourceDefinition>
+  </DataSourceDefinitionSet>
+  <MapDefinitionSet>
+    <MapDefinition id="id2" name="Mexico with Ranged Theme" alias="Map4">
+      <DisplayConditions>
+        <MapSize uom="mapinfo:imagesize pixel">
+          <ImageWidth>390</ImageWidth>
+          <ImageHeight>396</ImageHeight>
+        </MapSize>
+        <ZoomAndCenter>
+          <MapZoom uom="mapinfo:length mi">2329.84</MapZoom>
+          <gml:Point srsName="mapinfo:coordsys 1,69">
+            <gml:coordinates>-101.51371095766999,23.154653857907014</gml:coordinates>
+          </gml:Point>
+        </ZoomAndCenter>
+        <DisplayCoordSys>
+          <SRSName>mapinfo:coordsys 1,69</SRSName>
+        </DisplayCoordSys>
+        <ResizeMethod>preserveZoom</ResizeMethod>
+        <RasterConditions dither="halfTone" trueColor="true" optimizeRasterLayers="screen" optimizeVectorLayers="screen" />
+      </DisplayConditions>
+      <LayerList>
+        <LabelLayer id="id3" name="Mexico 1 Labels" alias="MexicoLabels" volatile="unknown">
+          <LabelSourceList>
+            <LabelSource maxLabels="2147483647" name="Mexico">
+              <DataSourceRef ref="id1" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="true" allowDuplicates="interLayer">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 100000</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="center">
+                    <BaseLabelStyle>
+                      <FontStyle size="8" size-unit="mapinfo:length pt" stroke="black" effect="white" effect-opacity="1" effect-type="halo" font-weight="normal" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <MapinfoStringExpression>State_Name</MapinfoStringExpression>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="false" end="none">
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>center</HorizontalAlignment>
+                      <VerticalAlignment>center</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>0</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelAngle uom="degrees" origin="referencePoint">0</LabelAngle>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+          </LabelSourceList>
+        </LabelLayer>
+        <FeatureLayer id="id4" name="Mexico" alias="mexico" volatile="unknown">
+          <DataSourceRef ref="id1" />
+          <FeatureStyleModifierThemeList>
+            <FeatureStyleRangeTheme id="id5" name="Buses 1991" alias="FeatureStyleModifier1">
+              <RangeValueExpression>
+                <NumericValueExpression>
+                  <MapinfoNumericExpression>Buses_91</MapinfoNumericExpression>
+                </NumericValueExpression>
+              </RangeValueExpression>
+              <RangeThemeBaseStyle applyStylePart="all">
+                <CompositeStyle>
+                  <LineStyle stroke="gray" width="1" width-unit="mapinfo:imagesize pixel">
+                    <Pen>mapinfo:pen 2</Pen>
+                  </LineStyle>
+                  <AreaStyle>
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <Interior fill-opacity="0" fill="(#id6)">
+                      <Defs>
+                        <Pattern id="id6">
+                          <Bitmap uri="mapinfo:brush 2">
+                            <ColorAdjustmentSet>
+                              <ColorAdjustment color-1="nonWhite" color-2="rgb(255,220,208)" opacity="1" />
+                              <ColorAdjustment color-1="white" color-2="black" opacity="1" />
+                            </ColorAdjustmentSet>
+                          </Bitmap>
+                        </Pattern>
+                      </Defs>
+                    </Interior>
+                  </AreaStyle>
+                  <PointStyle>
+                    <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="gray" text="#" family="MapInfo 3.0 Compatible" />
+                  </PointStyle>
+                  <MapinfoTextObjectStyle>
+                    <FontStyle size="12" size-unit="mapinfo:length pt" stroke="gray" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </MapinfoTextObjectStyle>
+                </CompositeStyle>
+              </RangeThemeBaseStyle>
+              <RangeThemeBinSet>
+                <RangeThemeBin>
+                  <NumericRange minInclusive="true" maxInclusive="false">375 1307</NumericRange>
+                  <CompositeStyle>
+                    <LineStyle stroke="rgb(255,220,208)" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <AreaStyle>
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                      <Interior fill-opacity="0" fill="(#id7)">
+                        <Defs>
+                          <Pattern id="id7">
+                            <Bitmap uri="mapinfo:brush 2">
+                              <ColorAdjustmentSet>
+                                <ColorAdjustment color-1="nonWhite" color-2="rgb(255,220,208)" opacity="1" />
+                                <ColorAdjustment color-1="white" color-2="black" opacity="1" />
+                              </ColorAdjustmentSet>
+                            </Bitmap>
+                          </Pattern>
+                        </Defs>
+                      </Interior>
+                    </AreaStyle>
+                    <PointStyle>
+                      <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="rgb(255,220,208)" text="#" family="MapInfo 3.0 Compatible" />
+                    </PointStyle>
+                    <MapinfoTextObjectStyle>
+                      <FontStyle size="12" size-unit="mapinfo:length pt" stroke="rgb(255,220,208)" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                    </MapinfoTextObjectStyle>
+                  </CompositeStyle>
+                  <LegendRowOverride>
+                    <Text>375 to 1,307</Text>
+                  </LegendRowOverride>
+                </RangeThemeBin>
+                <RangeThemeBin>
+                  <NumericRange minInclusive="true" maxInclusive="false">1307 2353</NumericRange>
+                  <CompositeStyle>
+                    <LineStyle stroke="rgb(255,160,160)" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <AreaStyle>
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                      <Interior fill-opacity="1" fill="(#id8)">
+                        <Defs>
+                          <Pattern id="id8">
+                            <Bitmap uri="mapinfo:brush 2">
+                              <ColorAdjustmentSet>
+                                <ColorAdjustment color-1="nonWhite" color-2="rgb(255,160,160)" opacity="1" />
+                                <ColorAdjustment color-1="white" color-2="black" opacity="1" />
+                              </ColorAdjustmentSet>
+                            </Bitmap>
+                          </Pattern>
+                        </Defs>
+                      </Interior>
+                    </AreaStyle>
+                    <PointStyle>
+                      <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="rgb(255,160,160)" text="#" family="MapInfo 3.0 Compatible" />
+                    </PointStyle>
+                    <MapinfoTextObjectStyle>
+                      <FontStyle size="12" size-unit="mapinfo:length pt" stroke="rgb(255,160,160)" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                    </MapinfoTextObjectStyle>
+                  </CompositeStyle>
+                  <LegendRowOverride>
+                    <Text>1,307 to 2,353</Text>
+                  </LegendRowOverride>
+                </RangeThemeBin>
+                <RangeThemeBin>
+                  <NumericRange minInclusive="true" maxInclusive="false">2353 3111</NumericRange>
+                  <CompositeStyle>
+                    <LineStyle stroke="rgb(255,112,112)" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <AreaStyle>
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                      <Interior fill-opacity="1" fill="(#id9)">
+                        <Defs>
+                          <Pattern id="id9">
+                            <Bitmap uri="mapinfo:brush 2">
+                              <ColorAdjustmentSet>
+                                <ColorAdjustment color-1="nonWhite" color-2="rgb(255,112,112)" opacity="1" />
+                                <ColorAdjustment color-1="white" color-2="black" opacity="1" />
+                              </ColorAdjustmentSet>
+                            </Bitmap>
+                          </Pattern>
+                        </Defs>
+                      </Interior>
+                    </AreaStyle>
+                    <PointStyle>
+                      <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="rgb(255,112,112)" text="#" family="MapInfo 3.0 Compatible" />
+                    </PointStyle>
+                    <MapinfoTextObjectStyle>
+                      <FontStyle size="12" size-unit="mapinfo:length pt" stroke="rgb(255,112,112)" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                    </MapinfoTextObjectStyle>
+                  </CompositeStyle>
+                  <LegendRowOverride>
+                    <Text>2,353 to 3,111</Text>
+                  </LegendRowOverride>
+                </RangeThemeBin>
+                <RangeThemeBin>
+                  <NumericRange minInclusive="true" maxInclusive="false">3111 4674</NumericRange>
+                  <CompositeStyle>
+                    <LineStyle stroke="rgb(255,48,48)" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <AreaStyle>
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                      <Interior fill-opacity="1" fill="(#id10)">
+                        <Defs>
+                          <Pattern id="id10">
+                            <Bitmap uri="mapinfo:brush 2">
+                              <ColorAdjustmentSet>
+                                <ColorAdjustment color-1="nonWhite" color-2="rgb(255,48,48)" opacity="1" />
+                                <ColorAdjustment color-1="white" color-2="black" opacity="1" />
+                              </ColorAdjustmentSet>
+                            </Bitmap>
+                          </Pattern>
+                        </Defs>
+                      </Interior>
+                    </AreaStyle>
+                    <PointStyle>
+                      <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="rgb(255,48,48)" text="#" family="MapInfo 3.0 Compatible" />
+                    </PointStyle>
+                    <MapinfoTextObjectStyle>
+                      <FontStyle size="12" size-unit="mapinfo:length pt" stroke="rgb(255,48,48)" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                    </MapinfoTextObjectStyle>
+                  </CompositeStyle>
+                  <LegendRowOverride>
+                    <Text>3,111 to 4,674</Text>
+                  </LegendRowOverride>
+                </RangeThemeBin>
+                <RangeThemeBin>
+                  <NumericRange minInclusive="true" maxInclusive="true">4674 11929</NumericRange>
+                  <CompositeStyle>
+                    <LineStyle stroke="red" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <AreaStyle>
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                      <Interior fill-opacity="1" fill="(#id11)">
+                        <Defs>
+                          <Pattern id="id11">
+                            <Bitmap uri="mapinfo:brush 2">
+                              <ColorAdjustmentSet>
+                                <ColorAdjustment color-1="nonWhite" color-2="red" opacity="1" />
+                                <ColorAdjustment color-1="white" color-2="black" opacity="1" />
+                              </ColorAdjustmentSet>
+                            </Bitmap>
+                          </Pattern>
+                        </Defs>
+                      </Interior>
+                    </AreaStyle>
+                    <PointStyle>
+                      <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="red" text="#" family="MapInfo 3.0 Compatible" />
+                    </PointStyle>
+                    <MapinfoTextObjectStyle>
+                      <FontStyle size="12" size-unit="mapinfo:length pt" stroke="red" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                    </MapinfoTextObjectStyle>
+                  </CompositeStyle>
+                  <LegendRowOverride>
+                    <Text>4,674 to 11,929</Text>
+                  </LegendRowOverride>
+                </RangeThemeBin>
+                <AllOthersStyle>
+                  <CompositeStyle>
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                    <AreaStyle>
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                      <Interior fill-opacity="1" fill="(#id12)">
+                        <Defs>
+                          <Pattern id="id12">
+                            <Bitmap uri="mapinfo:brush 1">
+                              <ColorAdjustmentSet>
+                                <ColorAdjustment color-1="nonWhite" color-2="black" opacity="1" />
+                                <ColorAdjustment color-1="white" opacity="1" />
+                              </ColorAdjustmentSet>
+                            </Bitmap>
+                          </Pattern>
+                        </Defs>
+                      </Interior>
+                    </AreaStyle>
+                    <PointStyle>
+                      <FontSymbol size="12" size-unit="mapinfo:length pt" stroke="black" family="MapInfo Symbols" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" text="(" />
+                    </PointStyle>
+                    <MapinfoTextObjectStyle>
+                      <FontStyle size="12" size-unit="mapinfo:length pt" stroke="black" stroke-opacity="0" family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" />
+                      <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                        <Pen>mapinfo:pen 2</Pen>
+                      </LineStyle>
+                    </MapinfoTextObjectStyle>
+                  </CompositeStyle>
+                </AllOthersStyle>
+              </RangeThemeBinSet>
+              <RangeThemeBinValueConstraints>
+                <RangeSpreadMethod allowEmptyRanges="true">equalCount</RangeSpreadMethod>
+                <RoundTo>none</RoundTo>
+              </RangeThemeBinValueConstraints>
+              <RangeThemeBinStyleConstraints spreadMethod="color">
+                <ColorSpreadMethod>rgb</ColorSpreadMethod>
+                <SizeSpreadMethod>sqrt</SizeSpreadMethod>
+              </RangeThemeBinStyleConstraints>
+            </FeatureStyleRangeTheme>
+          </FeatureStyleModifierThemeList>
+        </FeatureLayer>
+      </LayerList>
+      <MapLegendSet />
+    </MapDefinition>
+    <MapDefinition id="id13" name="Mexico with Pie Theme" alias="Map9">
+      <DisplayConditions>
+        <MapSize uom="mapinfo:imagesize pixel">
+          <ImageWidth>522</ImageWidth>
+          <ImageHeight>599</ImageHeight>
+        </MapSize>
+        <ZoomAndCenter>
+          <MapZoom uom="mapinfo:length mi">3398.373288</MapZoom>
+          <gml:Point srsName="mapinfo:coordsys 1,69">
+            <gml:coordinates>-100.84205,23.043211999999997</gml:coordinates>
+          </gml:Point>
+        </ZoomAndCenter>
+        <DisplayCoordSys>
+          <SRSName>mapinfo:coordsys 1,69</SRSName>
+        </DisplayCoordSys>
+        <ResizeMethod>preserveZoom</ResizeMethod>
+        <RasterConditions dither="halfTone" trueColor="true" optimizeRasterLayers="screen" optimizeVectorLayers="screen" />
+      </DisplayConditions>
+      <LayerList>
+        <ObjectThemeLayer id="id14" name="Theme1" alias="Theme1" volatile="unknown">
+          <DataSourceRef ref="id1" />
+          <FeaturePieTheme id="id15">
+            <Alignment>
+              <HorizontalAlignment>center</HorizontalAlignment>
+              <VerticalAlignment>center</VerticalAlignment>
+            </Alignment>
+            <PieBaseSize useScale="true">
+              <MapScale>39599251.775205515</MapScale>
+              <DataValueAtSize>2200000</DataValueAtSize>
+              <Diameter uom="mapinfo:length in">1</Diameter>
+              <PieGraduation>sqrt</PieGraduation>
+            </PieBaseSize>
+            <PieLayout graduatedSize="true">
+              <PieStartAngle uom="degrees">180</PieStartAngle>
+              <PieDirection>clockwise</PieDirection>
+              <PieArea>full</PieArea>
+            </PieLayout>
+            <WedgeDefinitionList>
+              <WedgeDefinition>
+                <NumericValueExpression>
+                  <MapinfoNumericExpression>Cars_91</MapinfoNumericExpression>
+                </NumericValueExpression>
+                <AreaStyle>
+                  <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                    <Pen>mapinfo:pen 2</Pen>
+                  </LineStyle>
+                  <Interior fill-opacity="1" fill="(#id16)">
+                    <Defs>
+                      <Pattern id="id16">
+                        <Bitmap uri="mapinfo:brush 2">
+                          <ColorAdjustmentSet>
+                            <ColorAdjustment color-1="nonWhite" color-2="red" opacity="1" />
+                            <ColorAdjustment color-1="white" opacity="1" />
+                          </ColorAdjustmentSet>
+                        </Bitmap>
+                      </Pattern>
+                    </Defs>
+                  </Interior>
+                </AreaStyle>
+              </WedgeDefinition>
+              <WedgeDefinition>
+                <NumericValueExpression>
+                  <MapinfoNumericExpression>Buses_91</MapinfoNumericExpression>
+                </NumericValueExpression>
+                <AreaStyle>
+                  <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                    <Pen>mapinfo:pen 2</Pen>
+                  </LineStyle>
+                  <Interior fill-opacity="1" fill="(#id17)">
+                    <Defs>
+                      <Pattern id="id17">
+                        <Bitmap uri="mapinfo:brush 2">
+                          <ColorAdjustmentSet>
+                            <ColorAdjustment color-1="nonWhite" color-2="lime" opacity="1" />
+                            <ColorAdjustment color-1="white" opacity="1" />
+                          </ColorAdjustmentSet>
+                        </Bitmap>
+                      </Pattern>
+                    </Defs>
+                  </Interior>
+                </AreaStyle>
+              </WedgeDefinition>
+              <WedgeDefinition>
+                <NumericValueExpression>
+                  <MapinfoNumericExpression>Trucks_91</MapinfoNumericExpression>
+                </NumericValueExpression>
+                <AreaStyle>
+                  <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                    <Pen>mapinfo:pen 2</Pen>
+                  </LineStyle>
+                  <Interior fill-opacity="1" fill="(#id18)">
+                    <Defs>
+                      <Pattern id="id18">
+                        <Bitmap uri="mapinfo:brush 2">
+                          <ColorAdjustmentSet>
+                            <ColorAdjustment color-1="nonWhite" color-2="blue" opacity="1" />
+                            <ColorAdjustment color-1="white" opacity="1" />
+                          </ColorAdjustmentSet>
+                        </Bitmap>
+                      </Pattern>
+                    </Defs>
+                  </Interior>
+                </AreaStyle>
+              </WedgeDefinition>
+            </WedgeDefinitionList>
+          </FeaturePieTheme>
+        </ObjectThemeLayer>
+        <FeatureLayer id="id19" name="Mexico" alias="mexico" volatile="unknown">
+          <DataSourceRef ref="id1" />
+        </FeatureLayer>
+      </LayerList>
+      <MapLegendSet />
+    </MapDefinition>
+  </MapDefinitionSet>
+  <MapinfoApplicationData>
+    <MapXtremeWindows>
+      <MapToolsSet>
+        <MapTools ref="id2">
+          <BaseMapToolProperties>
+            <MapToolProperties>
+              <InfotipProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InfoTipLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="drillDown grid vector raster seamless wms" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id4" />
+                  <LayerExclude refs="id3" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </InfotipProperties>
+              <SnapToNodeProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SnapLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id4" />
+                  <LayerExclude refs="id3" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SnapToNodeProperties>
+            </MapToolProperties>
+          </BaseMapToolProperties>
+          <BaseInsertionToolProperties>
+            <InsertionToolProperties>
+              <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InsertionLayers">
+                <MapToolInitialFilter>
+                  <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                </MapToolInitialFilter>
+                <LayerExclude refs="id3 id4" />
+                <MapToolFinalFilter>
+                  <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                </MapToolFinalFilter>
+              </MapToolFilter>
+            </InsertionToolProperties>
+          </BaseInsertionToolProperties>
+          <BaseSelectionToolProperties>
+            <SelectionToolProperties>
+              <SelectionProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SelectLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id4" />
+                  <LayerExclude refs="id3" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SelectionProperties>
+              <EditingProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.EditLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                  </MapToolInitialFilter>
+                  <LayerExclude refs="id3 id4" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </EditingProperties>
+            </SelectionToolProperties>
+          </BaseSelectionToolProperties>
+        </MapTools>
+        <MapTools ref="id13">
+          <BaseMapToolProperties>
+            <MapToolProperties>
+              <InfotipProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InfoTipLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="drillDown grid vector raster seamless wms" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id19" />
+                  <LayerExclude refs="id14" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </InfotipProperties>
+              <SnapToNodeProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SnapLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id19" />
+                  <LayerExclude refs="id14" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SnapToNodeProperties>
+            </MapToolProperties>
+          </BaseMapToolProperties>
+          <BaseInsertionToolProperties>
+            <InsertionToolProperties>
+              <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InsertionLayers">
+                <MapToolInitialFilter>
+                  <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                </MapToolInitialFilter>
+                <LayerExclude refs="id14 id19" />
+                <MapToolFinalFilter>
+                  <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                </MapToolFinalFilter>
+              </MapToolFilter>
+            </InsertionToolProperties>
+          </BaseInsertionToolProperties>
+          <BaseSelectionToolProperties>
+            <SelectionToolProperties>
+              <SelectionProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SelectLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id19" />
+                  <LayerExclude refs="id14" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SelectionProperties>
+              <EditingProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.EditLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                  </MapToolInitialFilter>
+                  <LayerExclude refs="id14 id19" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </EditingProperties>
+            </SelectionToolProperties>
+          </BaseSelectionToolProperties>
+        </MapTools>
+      </MapToolsSet>
+    </MapXtremeWindows>
+  </MapinfoApplicationData>
+</WorkSpace>

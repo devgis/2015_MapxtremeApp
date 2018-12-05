@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WorkSpace name="" version="MXP_WorkSpace_1_0" date="2006-01-04T12:11:12.0000000-05:00" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.mapinfo.com/mxp">
+  <ConnectionSet />
+  <DataSourceDefinitionSet>
+    <TABFileDataSourceDefinition id="id1" readOnly="false">
+      <DataSourceName>grid15</DataSourceName>
+      <FileName>grid15.tab</FileName>
+    </TABFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id2" readOnly="false">
+      <DataSourceName>ocean</DataSourceName>
+      <FileName>ocean.tab</FileName>
+    </TABFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id3" readOnly="false">
+      <DataSourceName>wldcty25</DataSourceName>
+      <FileName>wldcty25.tab</FileName>
+    </TABFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id4" readOnly="false">
+      <DataSourceName>world</DataSourceName>
+      <FileName>world.tab</FileName>
+    </TABFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id5" readOnly="false">
+      <DataSourceName>worldcap</DataSourceName>
+      <FileName>worldcap.tab</FileName>
+    </TABFileDataSourceDefinition>
+  </DataSourceDefinitionSet>
+  <MapDefinitionSet>
+    <MapDefinition id="id6" name="World Countries" alias="Map1">
+      <DisplayConditions>
+        <MapSize uom="mapinfo:imagesize pixel">
+          <ImageWidth>646</ImageWidth>
+          <ImageHeight>533</ImageHeight>
+        </MapSize>
+        <ZoomAndCenter>
+          <MapZoom uom="mapinfo:length mi">26510.549596</MapZoom>
+          <gml:Point srsName="mapinfo:coordsys 12,62,7,0">
+            <gml:coordinates>-497356.80462414213,100544.60755537916</gml:coordinates>
+          </gml:Point>
+        </ZoomAndCenter>
+        <DisplayCoordSys>
+          <SRSName>mapinfo:coordsys 12,62,7,0</SRSName>
+        </DisplayCoordSys>
+        <ResizeMethod>preserveZoom</ResizeMethod>
+        <RasterConditions dither="halfTone" trueColor="true" optimizeRasterLayers="screen" optimizeVectorLayers="screen" />
+      </DisplayConditions>
+      <LayerList>
+        <LabelLayer id="id7" name="World Countries Labels" alias="WORLDLabels" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <LabelSourceList>
+            <LabelSource maxLabels="2147483647" name="World 25 Major Cities">
+              <Visibility visible="true">
+                <VisibleRange enabled="true">
+                  <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 8000</ZoomRange>
+                </VisibleRange>
+              </Visibility>
+              <DataSourceRef ref="id3" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="true">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 8000</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="right">
+                    <BaseLabelStyle>
+                      <FontStyle family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="9" size-unit="mapinfo:length pt" stroke="black" stroke-opacity="0" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <AttributeName>Place_Name</AttributeName>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="true" end="none">
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>right</HorizontalAlignment>
+                      <VerticalAlignment>center</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>-2</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelRelativeOrientation>parallel</LabelRelativeOrientation>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+            <LabelSource maxLabels="2147483647" name="World Capitals">
+              <Visibility visible="true">
+                <VisibleRange enabled="true">
+                  <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 6500</ZoomRange>
+                </VisibleRange>
+              </Visibility>
+              <DataSourceRef ref="id5" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="true">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 6500</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="right">
+                    <BaseLabelStyle>
+                      <FontStyle family="Arial" font-style="normal" effect="rgb(255,232,208)" effect-opacity="1" effect-type="halo" font-weight="bold" text-decoration="none" text-case="default" shadow="false" expand="false" size="9" size-unit="mapinfo:length pt" stroke="black" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <AttributeName>Capital</AttributeName>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="true" end="none">
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>right</HorizontalAlignment>
+                      <VerticalAlignment>center</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>-2</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelRelativeOrientation>parallel</LabelRelativeOrientation>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+            <LabelSource maxLabels="2147483647" name="World Countries">
+              <Visibility visible="true">
+                <VisibleRange enabled="true">
+                  <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 10000</ZoomRange>
+                </VisibleRange>
+              </Visibility>
+              <DataSourceRef ref="id4" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="true">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 10000</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="center">
+                    <BaseLabelStyle>
+                      <FontStyle family="Arial" font-style="normal" effect="rgb(255,232,208)" effect-opacity="1" effect-type="halo" font-weight="bold" text-decoration="none" text-case="upper" shadow="false" expand="false" size="8" size-unit="mapinfo:length pt" stroke="maroon" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <AttributeName>Country</AttributeName>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="false" end="none">
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>center</HorizontalAlignment>
+                      <VerticalAlignment>center</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>0</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelRelativeOrientation>parallel</LabelRelativeOrientation>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+            <LabelSource maxLabels="2147483647" name="Grid">
+              <Visibility visible="true">
+                <VisibleRange enabled="false">
+                  <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 100000</ZoomRange>
+                </VisibleRange>
+              </Visibility>
+              <DataSourceRef ref="id1" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="false">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 100000</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="center">
+                    <BaseLabelStyle>
+                      <FontStyle family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="9" size-unit="mapinfo:length pt" stroke="black" stroke-opacity="0" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <AttributeName>Name</AttributeName>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="true" end="none">
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>center</HorizontalAlignment>
+                      <VerticalAlignment>top</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>0</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelRelativeOrientation>parallel</LabelRelativeOrientation>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+            <LabelSource maxLabels="2147483647" name="Ocean (Robinson)">
+              <Visibility visible="true">
+                <VisibleRange enabled="false">
+                  <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 100000</ZoomRange>
+                </VisibleRange>
+              </Visibility>
+              <DataSourceRef ref="id2" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="false">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 100000</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="center">
+                    <BaseLabelStyle>
+                      <FontStyle family="Arial" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="9" size-unit="mapinfo:length pt" stroke="black" stroke-opacity="0" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <AttributeName>Name</AttributeName>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="false" end="none">
+                    <LineStyle stroke="black" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>center</HorizontalAlignment>
+                      <VerticalAlignment>center</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>0</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelRelativeOrientation>parallel</LabelRelativeOrientation>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+          </LabelSourceList>
+        </LabelLayer>
+        <FeatureLayer id="id8" name="World 25 Major Cities" alias="wldcty25" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="true">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 25000</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id3" />
+        </FeatureLayer>
+        <FeatureLayer id="id9" name="World Capitals" alias="worldcap" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="true">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="true">0 6500</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id5" />
+        </FeatureLayer>
+        <FeatureLayer id="id10" name="World Countries" alias="world" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id4" />
+        </FeatureLayer>
+        <FeatureLayer id="id11" name="Grid" alias="grid15" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id1" />
+        </FeatureLayer>
+        <FeatureLayer id="id12" name="Ocean (Robinson)" alias="ocean" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id2" />
+        </FeatureLayer>
+      </LayerList>
+      <MapLegendSet />
+    </MapDefinition>
+  </MapDefinitionSet>
+  <MapinfoApplicationData>
+    <MapXtremeWindows>
+      <MapToolsSet>
+        <MapTools ref="id6">
+          <BaseMapToolProperties>
+            <MapToolProperties>
+              <InfotipProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InfoTipLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="drillDown grid vector raster seamless wms" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id8 id9 id10 id11 id12" />
+                  <LayerExclude refs="id7" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </InfotipProperties>
+              <SnapToNodeProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SnapLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id8 id9 id10 id11 id12" />
+                  <LayerExclude refs="id7" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SnapToNodeProperties>
+            </MapToolProperties>
+          </BaseMapToolProperties>
+          <BaseInsertionToolProperties>
+            <InsertionToolProperties>
+              <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InsertionLayers">
+                <MapToolInitialFilter>
+                  <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                </MapToolInitialFilter>
+                <LayerExclude refs="id7 id8 id9 id10 id11 id12" />
+                <MapToolFinalFilter>
+                  <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                </MapToolFinalFilter>
+              </MapToolFilter>
+            </InsertionToolProperties>
+          </BaseInsertionToolProperties>
+          <BaseSelectionToolProperties>
+            <SelectionToolProperties>
+              <SelectionProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SelectLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id8 id9 id10 id11 id12" />
+                  <LayerExclude refs="id7" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SelectionProperties>
+              <EditingProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.EditLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                  </MapToolInitialFilter>
+                  <LayerExclude refs="id7 id8 id9 id10 id11 id12" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </EditingProperties>
+            </SelectionToolProperties>
+          </BaseSelectionToolProperties>
+        </MapTools>
+      </MapToolsSet>
+    </MapXtremeWindows>
+  </MapinfoApplicationData>
+</WorkSpace>

@@ -1,0 +1,69 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 4
+    Country Char (35) Index 1 ;
+    Capital Char (30) ;
+    Continent Char (20) Index 2 ;
+    nodecounts Integer ;
+ReadOnly
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\Identification" = ""
+"\Identification\Use Constraints" = "For use with MapX/MapXtreme"
+"\Identification\Access Constraints" = "Licensed Users"
+"\Identification\Domain" = ""
+"\Identification\Domain\Bounds" = ""
+"\Identification\Domain\Bounds\West" = "-16194966.29"
+"\Identification\Domain\Bounds\East" = "16789976.63"
+"\Identification\Domain\Bounds\North" = "8326222.65"
+"\Identification\Domain\Bounds\South" = "-8621185.32"
+"\Identification\Citation" = "MapInfo Professional Bundled Maps; World Countries"
+"\Identification\Description" = ""
+"\Identification\Description\Abstract" = "Very generalized boundaries for world countries.   Based on current World Almanac and UN definitions of Countries."
+"\Identification\Description\Memo" = "Edited with India boundaries - 3/10/1999"
+"\Identification\Time Period" = ""
+"\Identification\Time Period\Currentness" = "1995"
+"\Identification\Keywords" = ""
+"\Identification\Keywords\Theme" = ""
+"\Identification\Keywords\Theme\Geography" = "World"
+"\Identification\Keywords\Theme\Geography\Abbreviation" = ""
+"\Identification\Keywords\Theme\Content" = "Reference Data"
+"\Identification\Keywords\Place" = ""
+"\Identification\Keywords\Place\Layers" = ""
+"\Identification\Keywords\Place\Layers\Count" = "1"
+"\Identification\Keywords\Place\Layers\Layer1Name" = "World"
+"\Identification\Keywords\Place\Layers\Layer1" = "World"
+"\Spatial Reference" = ""
+"\Spatial Reference\Geographic" = ""
+"\Spatial Reference\Geographic\Projection" = ""
+"\Spatial Reference\Geographic\Projection\Clause" = "CoordSys Earth Projection 12, 62, ""m"", 0 Bounds (-34012036.7393, -8625248.51472) (34012036.7393, 8625248.51472)"
+"\Spatial Reference\Geographic\Projection\Name" = "Robinson"
+"\Spatial Reference\Geographic\Coordinate Units" = "Meters"
+"\Spatial Reference\Geodetic" = ""
+"\Spatial Reference\Geodetic\Datum" = "NAD 27"
+"\Spatial Reference\Geodetic\Ellipsoid" = "Clarke 1866"
+"\Spatial Organization" = ""
+"\Spatial Organization\Object" = ""
+"\Spatial Organization\Object\Type1" = "Regions"
+"\Spatial Organization\Object\Type1\Count" = "218"
+"\Spatial Organization\Object\Type2" = "Points"
+"\Spatial Organization\Object\Type2\Count" = "0"
+"\Spatial Organization\Object\Type3" = "Polylines"
+"\Spatial Organization\Object\Type3\Count" = "0"
+"\Spatial Organization\Object\Type4" = "Lines"
+"\Spatial Organization\Object\Type4\Count" = "0"
+"\Spatial Organization\Object\All" = ""
+"\Spatial Organization\Object\All\TotalCount" = "218"
+"\Spatial Organization\Method" = ""
+"\Spatial Organization\Method\Type" = "Polygons"
+"\Quality" = ""
+"\Quality\Lineage" = ""
+"\Quality\Lineage\Source" = ""
+"\Quality\Lineage\Source\Vintage" = "1995"
+"\Quality\Lineage\Source\Scale" = "~ 1:20,000,000"
+"\Quality\Lineage\Source\Citation" = "MapInfo from Digital Chart of the World"
+end_metadata
